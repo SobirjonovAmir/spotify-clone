@@ -1,0 +1,82 @@
+/*
+ * Legal Disclaimer
+ *
+ * These web fonts are licensed exclusively for use on the following:
+ * spotify.com
+ *
+ * It is strictly forbidden to download or use these fonts on any other website domain or media.
+ *
+ * While the @font-face statements below may be modified by the client, this
+ * disclaimer may not be removed.
+ *
+ * Lineto.com, 2018
+ */
+
+/*
+ *
+ * INSTRUCTIONS
+ *
+ * Copy the Legal Disclaimer and the @font-faces statements to your regular CSS file.
+ * The fonts folder(s) should be placed relative to the regular CSS file.
+ *
+ */
+
+@font-face {
+  font-family: "Circular Sp Cyr Black Italic Web";
+  src: url("fonts/Circular Sp Cyr Web Black Italic.woff") format("woff"),
+    url("fonts/Circular Sp Cyr Web Black Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Circular Sp Cyr Black Web";
+  src: url("fonts/Circular Sp Cyr Web Black.woff") format("woff"),
+    url("fonts/Circular Sp Cyr Web Black.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Circular Sp Cyr Bold Italic Web";
+  src: url("fonts/Circular Sp Cyr Web Bold Italic.woff") format("woff"),
+    url("fonts/Circular Sp Cyr Web Bold Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Circular Sp Cyr Bold Web";
+  src: url("fonts/Circular Sp Cyr Web Bold.woff") format("woff"),
+    url("fonts/Circular Sp Cyr Web Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Circular Sp Cyr Book Italic Web";
+  src: url("fonts/Circular Sp Cyr Web Book Italic.woff") format("woff"),
+    url("fonts/Circular Sp Cyr Web Book Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Circular Sp Cyr Book Web";
+  src: url("fonts/Circular Sp Cyr Web Book.woff") format("woff"),
+    url("fonts/Circular Sp Cyr Web Book.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Circular Sp Cyr Light Italic Web";
+  src: url("fonts/Circular Sp Cyr Web Light Italic.woff") format("woff"),
+    url("fonts/Circular Sp Cyr Web Light Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Circular Sp Cyr Light Web";
+  src: url("fonts/Circular Sp Cyr Web Light.woff") format("woff"),
+    url("fonts/Circular Sp Cyr Web Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Circular Sp Cyr Medium Italic Web";
+  src: url("fonts/Circular Sp Cyr Web Medium Italic.woff") format("woff"),
+    url("fonts/Circular Sp Cyr Web Medium Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Circular Sp Cyr Medium Web";
+  src: url("fonts/Circular Sp Cyr Web Medium.woff") format("woff"),
+    url("fonts/Circular Sp Cyr Web Medium.woff2") format("woff2");
+}
