@@ -51,7 +51,7 @@ function resizeSidebar(e) {
 			}
 		}
 		localStorage.setItem("range", sidebarResizeInput.value)
-		document.querySelector(".root").style.cursor = "ew-resize"
+		document.querySelector(".root").style.cursor = "col-resize"
 		sidebarResize.style.background = "white"
 	}
 }

@@ -282,7 +282,7 @@ body {
       position: relative;
       width: 2px;
       opacity: 0.7;
-      cursor: ew-resize;
+      cursor: col-resize;
       opacity: 0.3;
       &:hover {
         background: white !important;
@@ -329,6 +329,7 @@ body {
   }
 
   .bottom {
+    user-select: none;
     margin-top: 10px;
     z-index: 5;
     grid-area: bottom;
@@ -347,6 +348,347 @@ body {
         img {
           width: 100%;
           height: 100%;
+        }
+      }
+      .context {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 1px;
+        margin-bottom: 2px;
+        a {
+          text-decoration: none;
+        }
+        .item-info-title {
+          color: var(--text-base);
+          font-size: 14px;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        .item-info-subtitles {
+          color: var(--text-base);
+          font-size: 11px;
+          opacity: 0.6;
+          &:hover {
+            opacity: 1;
+            text-decoration: underline;
+          }
+        }
+      }
+      button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        label {
+          position: relative;
+          width: auto;
+          height: auto;
+        }
+
+        svg {
+          height: 18px;
+          overflow: visible;
+          cursor: pointer;
+          opacity: 0.7;
+          &:hover {
+            opacity: 1;
+            scale: 1.05;
+          }
+          &.shake {
+            animation: shake 0.5s cubic-bezier(0.12, 0.84, 0.5, 0.44) forwards;
+            animation-delay: 0.2s;
+          }
+        }
+
+        input[type="checkbox"] {
+          display: none;
+        }
+
+        input[type="checkbox"] + label {
+          width: 20px;
+          height: 20px;
+          position: relative;
+          display: grid;
+          place-content: center;
+          #center-heart {
+            #inner {
+              fill: transparent;
+              transition: 0.2s ease;
+            }
+            #outer {
+              fill: white;
+              transition: 0.2s ease;
+            }
+          }
+          #left-hearts > *,
+          #right-hearts > * {
+            opacity: 0;
+            transition: 0.2s ease;
+          }
+        }
+
+        input[type="checkbox"]:checked + label {
+          cursor: pointer;
+
+          svg {
+            opacity: 1;
+          }
+          &::before,
+          &::after {
+            content: "";
+            display: grid;
+            border-radius: 100%;
+            position: absolute;
+            outline: 10px solid var(--essential-bright-accent);
+            height: 22px;
+            width: 25px;
+            animation: scalePulse 0.3s cubic-bezier(0.12, 0.84, 0.5, 0.44)
+              forwards;
+          }
+
+          &::after {
+            opacity: 1;
+            transform: scale(0);
+            animation-delay: 0.2s;
+          }
+          #center-heart {
+            #inner {
+              fill: var(--essential-bright-accent);
+            }
+            #outer {
+              fill: var(--essential-bright-accent);
+            }
+          }
+          #left-hearts > *,
+          #right-hearts > * {
+            transform-origin: center center;
+            animation: floatingHearts 0.65s cubic-bezier(0.12, 0.84, 0.5, 0.44)
+              forwards;
+          }
+          #right-hearts {
+            g:first-child {
+              animation-delay: 0.3s;
+            }
+            g:last-child {
+              animation-delay: 0.1s;
+            }
+          }
+          #left-hearts {
+            g:first-child {
+              animation-delay: 0.2s;
+            }
+            g:last-child {
+              animation-delay: 0.5s;
+            }
+          }
+        }
+
+        @keyframes shake {
+          0% {
+            transform: translate(-3px, 0) rotate(-3deg);
+          }
+          25% {
+            transform: translate(2px, 0px) rotate(2deg);
+          }
+          50% {
+            transform: translate(-1px, 0px) rotate(1deg);
+          }
+          100% {
+            transform: translate(0px, 0px) rotate(0deg);
+          }
+        }
+
+        @keyframes floatingHearts {
+          0% {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+
+          50% {
+            opacity: 0.5;
+          }
+
+          100% {
+            opacity: 0;
+            transform: translateY(-50px);
+          }
+        }
+
+        @keyframes scalePulse {
+          from {
+            transform: scale(0);
+          }
+
+          to {
+            transform: scale(1.1);
+            opacity: 0;
+          }
+        }
+      }
+    }
+
+    .player-controls {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+
+      &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 8px;
+        .player-controls__left,
+        .player-controls__right {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          button {
+            position: relative;
+            &::after {
+              display: none;
+              content: "";
+              position: absolute;
+              left: 50%;
+              bottom: -5px;
+              translate: -50% 0;
+              background: var(--essential-bright-accent);
+              width: 4px;
+              height: 4px;
+              border-radius: 50%;
+            }
+            opacity: 0.8;
+            &:hover {
+              opacity: 1;
+            }
+            &.active {
+              &::after {
+                display: block;
+              }
+              svg {
+                fill: var(--essential-bright-accent);
+              }
+            }
+          }
+        }
+        .play {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #fff;
+          &:hover {
+            transition: scale 0.1s;
+            scale: 1.04;
+          }
+          svg {
+            fill: #000;
+            width: 16px;
+            height: 16px;
+          }
+        }
+
+        button {
+          cursor: pointer;
+          background: none;
+          border: none;
+          svg {
+            fill: var(--text-base);
+          }
+        }
+      }
+      .playback-bar {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+
+        .playback-progressbar {
+          input[type="range"] {
+            visibility: hidden;
+            display: none;
+          }
+          .progress-bar {
+            width: 500px;
+            height: 3px;
+            border-radius: 5px;
+            background: #4d4d4d;
+            margin-top: 4px;
+            &:hover {
+              .progress-bar-background {
+                background: var(--essential-bright-accent);
+                &::after {
+                  display: block;
+                }
+              }
+            }
+            &-background {
+              position: relative;
+              width: 50%;
+              height: 100%;
+              border-radius: 5px;
+              background: var(--text-base);
+              &::after {
+                content: "";
+                display: none;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                translate: 0 -50%;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: var(--text-base);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .left-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+
+      button {
+        display: flex;
+        align-items: center;
+        background: none;
+        outline: none;
+        border: none;
+        fill: var(--text-base);
+        opacity: 0.7;
+        cursor: pointer;
+        &:hover {
+          opacity: 1;
+          scale: 1.05;
+        }
+        span {
+          height: 16px;
+        }
+      }
+
+      .volume {
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+        fill: var(--text-base);
+        svg {
+          opacity: 0.7;
+          cursor: pointer;
+          &:hover {
+            opacity: 1;
+            scale: 1.05;
+          }
+        }
+        input {
+          width: 90px;
         }
       }
     }
