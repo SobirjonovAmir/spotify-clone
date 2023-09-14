@@ -17,7 +17,7 @@
       <nav class="left-sidebar__wrapper">
         <div class="left-sidebar__top">
           <ul class="left-sidebar__top-list">
-            <li class="left-sidebar__top-list-item active">
+            <li class="left-sidebar__top-list-item">
               <a id="home-link" draggable="false" href="/">
                 <svg class="home-icon" role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24"
                   data-encore-id="icon">
@@ -77,7 +77,7 @@
             </div>
 
             <div class="activities">
-              <button class="create-playlist">
+              <button class="create-playlist" data-tooltip="Создать плейлист или папку">
                 <svg role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16" data-encore-id="icon">
                   <path
                     d="M15.25 8a.75.75 0 0 1-.75.75H8.75v5.75a.75.75 0 0 1-1.5 0V8.75H1.5a.75.75 0 0 1 0-1.5h5.75V1.5a.75.75 0 0 1 1.5 0v5.75h5.75a.75.75 0 0 1 .75.75z">
@@ -86,7 +86,7 @@
               </button>
 
               <div class="expand">
-                <button>
+                <button id="roll" data-tooltip="Развернуть">
                   <svg role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16" data-encore-id="icon">
                     <path
                       d="M7.19 1A.749.749 0 0 1 8.47.47L16 7.99l-7.53 7.521a.75.75 0 0 1-1.234-.815.75.75 0 0 1 .174-.243l5.72-5.714H.75a.75.75 0 1 1 0-1.498h12.38L7.41 1.529a.749.749 0 0 1-.22-.53z">
@@ -96,14 +96,14 @@
               </div>
 
               <div class="collapse">
-                <button class="change-view">
+                <button data-tooltip="Показать в виде таблицы" class="change-view">
                   <svg role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16" data-encore-id="icon">
                     <path
                       d="M1 1h6v6H1V1zm1.5 1.5v3h3v-3h-3zM1 9h6v6H1V9zm1.5 1.5v3h3v-3h-3zM9 1h6v6H9V1zm1.5 1.5v3h3v-3h-3zM9 9h6v6H9V9zm1.5 1.5v3h3v-3h-3z">
                     </path>
                   </svg>
                 </button>
-                <button>
+                <button id="turn-aside" data-tooltip="Свернуть">
                   <svg role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16" data-encore-id="icon">
                     <path
                       d="M8.81 1A.749.749 0 0 0 7.53.47L0 7.99l7.53 7.521a.75.75 0 0 0 1.234-.815.75.75 0 0 0-.174-.243L2.87 8.74h12.38a.75.75 0 1 0 0-1.498H2.87l5.72-5.713c.14-.14.22-.331.22-.53z">
@@ -114,6 +114,27 @@
               </div>
             </div>
           </header>
+          <div class="left-sidebar__bottom-sorting">
+            <div class="sorting__left">
+              <button class="font-book">Плейлисты</button>
+              <button class="font-book">Исполнители</button>
+            </div>
+            <div class="sorting__right">
+              <div class="filter">
+                <button data-tooltip="Искать в медиатеке">
+                  <svg role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16" data-encore-id="icon">
+                    <path
+                      d="M7 1.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5zM.25 7a6.75 6.75 0 1 1 12.096 4.12l3.184 3.185a.75.75 0 1 1-1.06 1.06L11.304 12.2A6.75 6.75 0 0 1 .25 7z">
+                    </path>
+                  </svg>
+                </button>
+                <input placeholder="Искать в медиатеке" type="search">
+              </div>
+              <div class="drop">
+                <p class="font-book"> Недавно прослушано</p>
+              </div>
+            </div>
+          </div>
           <div class="left-sidebar__bottom-media">
 
             <ul class="media-list">
@@ -133,25 +154,8 @@
 
 
     <div class="main">
-      <div class="top"></div>
-      <div class="content">
-        <iframe style="border-radius:12px"
-          src="https://open.spotify.com/embed/track/1j4kHkkpqZRBwE0A4CN4Yv?utm_source=generator&theme=0" width="100%"
-          height="152" frameBorder="0" allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <iframe style="border-radius:12px"
-          src="https://open.spotify.com/embed/track/58HvfVOeJY7lUuCqF0m3ly?utm_source=generator&theme=0" width="100%"
-          height="152" frameBorder="0" allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <iframe style="border-radius:12px"
-          src="https://open.spotify.com/embed/track/45bE4HXI0AwGZXfZtMp8JR?utm_source=generator&theme=0" width="100%"
-          height="152" frameBorder="0" allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <iframe style="border-radius:12px"
-          src="https://open.spotify.com/embed/track/1SOClUWhOi8vHZYMz3GluK?utm_source=generator" width="100%"
-          height="152" frameBorder="0" allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      </div>
+      <header class="top"></header>
+      <main class="content"></main>
       <footer>
 
       </footer>
@@ -295,7 +299,7 @@
 
 
         <div class="playback-bar">
-          <div>-:--</div>
+          <div class="font-light playback-time">2:36</div>
           <div class="playback-progressbar">
             <label>
               <input type="range" min="0" max="100" step="1" value="10">
@@ -310,7 +314,7 @@
               <div style="width: 100%;"></div>
             </div>
           </div>
-          <div>-:--</div>
+          <div class="font-light playback-time">2:36</div>
         </div>
 
 
@@ -362,7 +366,8 @@
 
 
         <div class="volume">
-          <svg data-tooltip='Выключить звук' height="16" width="16" id="volume-icon" viewBox="0 0 16 16" data-encore-id="icon">
+          <svg data-tooltip='Выключить звук' height="16" width="16" id="volume-icon" viewBox="0 0 16 16"
+            data-encore-id="icon">
             <path
               d="M9.741.85a.75.75 0 0 1 .375.65v13a.75.75 0 0 1-1.125.65l-6.925-4a3.642 3.642 0 0 1-1.33-4.967 3.639 3.639 0 0 1 1.33-1.332l6.925-4a.75.75 0 0 1 .75 0zm-6.924 5.3a2.139 2.139 0 0 0 0 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 4.29V5.56a2.75 2.75 0 0 1 0 4.88z">
             </path>

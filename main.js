@@ -23,7 +23,6 @@ let searchLink = document.querySelector("#search-link")
 
 homeLink.onclick = (e) => {
 	e.preventDefault()
-
 	if (location.pathname !== "/") {
 		homeLink.parentElement.classList.add("active")
 		searchLink.parentElement.classList.remove("active")
