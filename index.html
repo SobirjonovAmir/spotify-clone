@@ -121,24 +121,94 @@
             </div>
             <div class="sorting__right">
               <div class="filter">
-                <button data-tooltip="Искать в медиатеке">
+                <button id="media-search" data-tooltip="Искать в медиатеке">
                   <svg role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16" data-encore-id="icon">
                     <path
                       d="M7 1.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5zM.25 7a6.75 6.75 0 1 1 12.096 4.12l3.184 3.185a.75.75 0 1 1-1.06 1.06L11.304 12.2A6.75 6.75 0 0 1 .25 7z">
                     </path>
                   </svg>
                 </button>
-                <input placeholder="Искать в медиатеке" type="search">
+                <input class="font-medium" id="media-search-input" placeholder="Искать в медиатеке" type="text">
               </div>
               <div class="drop">
-                <p class="font-book"> Недавно прослушано</p>
+                <p class="font-bold">недавно прослушано</p>
               </div>
             </div>
           </div>
           <div class="left-sidebar__bottom-media">
-
             <ul class="media-list">
-              <li class="media-list__item"></li>
+              <li class="media-list__item">
+                <div class="item-img">
+                  <img src="https://i.scdn.co/image/ab67706f00000002fecb9c578f38ebc8eef432cc" alt="artist-img">
+                </div>
+                <div class="item-title">
+                  <p class="font-medium">Мega Hit Mix</p>
+                  <p class="font-book">Плейлист • spotify</p>
+                </div>
+              </li>
+              <li class="media-list__item">
+                <div class="item-img">
+                  <img src="https://i.scdn.co/image/ab67706f00000002fecb9c578f38ebc8eef432cc" alt="artist-img">
+                </div>
+                <div class="item-title">
+                  <p class="font-medium">Мega Hit Mix</p>
+                  <p class="font-book">Плейлист • spotify</p>
+                </div>
+              </li>
+              <li class="media-list__item">
+                <div class="item-img">
+                  <img src="https://i.scdn.co/image/ab67706f00000002fecb9c578f38ebc8eef432cc" alt="artist-img">
+                </div>
+                <div class="item-title">
+                  <p class="font-medium">Мega Hit Mix</p>
+                  <p class="font-book">Плейлист • spotify</p>
+                </div>
+              </li>
+              <li class="media-list__item">
+                <div class="item-img">
+                  <img src="https://i.scdn.co/image/ab67706f00000002fecb9c578f38ebc8eef432cc" alt="artist-img">
+                </div>
+                <div class="item-title">
+                  <p class="font-medium">Мega Hit Mix</p>
+                  <p class="font-book">Плейлист • spotify</p>
+                </div>
+              </li>
+              <li class="media-list__item">
+                <div class="item-img">
+                  <img src="https://i.scdn.co/image/ab67706f00000002fecb9c578f38ebc8eef432cc" alt="artist-img">
+                </div>
+                <div class="item-title">
+                  <p class="font-medium">Мega Hit Mix</p>
+                  <p class="font-book">Плейлист • spotify</p>
+                </div>
+              </li>
+              <li class="media-list__item">
+                <div class="item-img">
+                  <img src="https://i.scdn.co/image/ab67706f00000002fecb9c578f38ebc8eef432cc" alt="artist-img">
+                </div>
+                <div class="item-title">
+                  <p class="font-medium">Мega Hit Mix</p>
+                  <p class="font-book">Плейлист • spotify</p>
+                </div>
+              </li>
+              <li class="media-list__item">
+                <div class="item-img">
+                  <img src="https://i.scdn.co/image/ab67706f00000002fecb9c578f38ebc8eef432cc" alt="artist-img">
+                </div>
+                <div class="item-title">
+                  <p class="font-medium">Мega Hit Mix</p>
+                  <p class="font-book">Плейлист • spotify</p>
+                </div>
+              </li>
+              <li class="media-list__item">
+                <div class="item-img">
+                  <img src="https://i.scdn.co/image/ab67706f00000002fecb9c578f38ebc8eef432cc" alt="artist-img">
+                </div>
+                <div class="item-title">
+                  <p class="font-medium">Мega Hit Mix</p>
+                  <p class="font-book">Плейлист • spotify</p>
+                </div>
+              </li>
 
             </ul>
           </div>
@@ -154,7 +224,43 @@
 
 
     <div class="main">
-      <header class="top"></header>
+      <header class="top">
+        <div class="right-side">
+          <div class="forward">
+            <button id="backButton" data-tooltip="Назад">
+              <svg role="img" height="16" width="16" viewBox="0 0 16 16" data-encore-id="icon">
+                <path
+                  d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z">
+                </path>
+              </svg>
+            </button>
+            <button id="forwardButton" data-tooltip="Вперед">
+              <svg height="16" width="16" aria-hidden="true" viewBox="0 0 16 16">
+                <path
+                  d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z">
+                </path>
+              </svg>
+            </button>
+          </div>
+          <form class="search-form" name="search" role="search">
+            <span>
+              <svg id="search-icon" height="16" width="16" viewBox="0 0 16 16">
+                <path
+                  d="M7 1.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5zM.25 7a6.75 6.75 0 1 1 12.096 4.12l3.184 3.185a.75.75 0 1 1-1.06 1.06L11.304 12.2A6.75 6.75 0 0 1 .25 7z">
+                </path>
+              </svg>
+            </span>
+            <input name="result" class="font-book" maxlength="800" autocomplete="off" autocorrect="off"
+              autocapitalize="off" spellcheck="false" placeholder="Что хочешь послушать?">
+          </form>
+        </div>
+        <button id="user-pofile" data-tooltip="Amir">
+          <figure>
+            <img draggable="false" loading="eager"
+              src="https://i.scdn.co/image/ab67757000003b8245bcb765ae5ee910b84efca9" alt="Amir">
+          </figure>
+        </button>
+      </header>
       <main class="content"></main>
       <footer>
 

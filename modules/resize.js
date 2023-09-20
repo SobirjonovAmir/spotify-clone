@@ -25,7 +25,7 @@ turn_aside.onclick = () => {
 	if (closed) {
 		sidebarContainer.style.width = closed + "px";
 		localStorage.setItem("range", closed)
-	}else {
+	} else {
 		sidebarContainer.style.width = 420 + "px";
 	}
 	sidebarContainer.classList.remove("show")
