@@ -105,3 +105,14 @@ let media_search_input = document.querySelector("#media-search-input")
 media_search.onclick = () => {
 	media_search_input.focus()
 }
+
+media_search_input.onfocus = () => {
+	media_search.classList.add("active")
+	media_search.style.pointerEvents = "none"
+}
+media_search_input.onblur = () => {
+	setTimeout(() => {
+		media_search.classList.remove("active")
+	}, 100);
+	media_search.style.pointerEvents = "auto"
+}

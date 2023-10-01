@@ -93,14 +93,13 @@ body {
     "left-sidebar main right-sidebar"
     "bottom bottom bottom";
   grid-template-columns: auto 1fr auto;
-  grid-template-rows: 1fr 80px;
 
   .main {
     z-index: 99;
     grid-area: main;
     background-color: var(--background-base);
     border-radius: 8px;
-    //overflow: hidden;
+    overflow: hidden;
     overflow-y: auto;
 
     scrollbar-width: thin;
@@ -257,6 +256,7 @@ body {
     grid-area: left-sidebar;
     margin-right: 6px;
     width: 290px;
+    max-width: 100%;
     display: grid;
     grid-template-columns: 1fr 2px;
 
@@ -426,6 +426,7 @@ body {
               display: flex;
               justify-content: space-between;
               align-items: center;
+
               button {
                 border: none;
                 background: none;
@@ -455,14 +456,11 @@ body {
                 outline: none;
                 background: var(--background-tinted-highlight);
                 border-radius: 4px;
-              }
-              input:focus + button {
-                pointer-events: none !important;
-                background: blue;
+                margin: 3px 0 2px;
               }
               input:focus {
-                display: block;
                 width: 170px;
+                display: block;
                 padding: 9px 0px 5px 30px;
                 color: var(--text-subdued);
                 animation: open 0.5s ease;
@@ -475,17 +473,6 @@ body {
               }
               white-space: nowrap;
               text-overflow: ellipsis;
-              details {
-                .summary-wrapper {
-                  word-wrap: break-word;
-                  white-space: nowrap;
-                  position: absolute;
-                  margin-top: 10px;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                }
-              }
             }
           }
         }
@@ -667,7 +654,8 @@ body {
     grid-area: bottom;
     background-color: var(--background-press);
     width: 100%;
-    padding: 0 9px;
+
+    padding: 7px 9px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -679,6 +667,7 @@ body {
       min-width: 30%;
       .artits-img {
         img {
+          border-radius: 5px;
           width: 100%;
           height: 100%;
         }
